@@ -1,0 +1,1 @@
+echo ahoy from script.sh

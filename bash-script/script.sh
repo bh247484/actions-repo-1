@@ -1,1 +1,0 @@
-echo ahoy matey, from script.sh
