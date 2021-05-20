@@ -1,0 +1,16 @@
+name: Maiden Voyage
+
+on:
+  push:
+    branchs: [ master ]
+  pull_request:
+    branchs: [ master ]
+
+jobs:
+  test_build:
+
+    runs_on: ubuntu-latest
+
+    steps:
+    - name: test_step
+      run: echo ahoy matey
