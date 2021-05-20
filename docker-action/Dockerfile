@@ -4,6 +4,7 @@ FROM ubuntu:latest
 RUN apt update
 RUN apt install -y git
 RUN apt install -y curl
+RUN apt install -y hub
 
 ENV NVM_VERSION v0.33.8
 ENV NODE_VERSION v12.20.1
@@ -21,6 +22,17 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSION/insta
 # RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash \
 #     && apt-get install -y nodejs \
 #     && npm install -y --global yarn
+
+# Copy ssh key into repo
+ADD ~/.ssh/id_rsa /root/.ssh/id_rsa
+RUN chmod 600 /root/.ssh/id_rsa
+
+# Use git with SSH instead of https
+RUN echo “[url \”git@github.com:\”]\n\tinsteadOf = https://github.com/" >> /root/.gitconfig
+# Skip Host verification for git
+RUN echo “StrictHostKeyChecking no “ > /root/.ssh/config
+
+RUN git config --global hub.protocol ssh
 
 RUN echo ahoy from Dockerfile
 
