@@ -5,7 +5,7 @@ RUN apt update
 RUN apt install -y git
 RUN apt install -y curl
 
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash \
     && apt-get install -y nodejs \
     && npm install -y --global yarn
 
