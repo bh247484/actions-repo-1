@@ -1,0 +1,5 @@
+name: Docker Action Interior
+
+runs:
+  using: "docker"
+  image: "./docker_dir/Dockerfile"
