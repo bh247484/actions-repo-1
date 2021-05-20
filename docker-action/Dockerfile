@@ -3,11 +3,11 @@ FROM ubuntu:latest
 
 RUN apt update
 RUN apt install -y git
-RUN apt install curl
+RUN apt install -y curl
 
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - \
     && apt-get install -y nodejs \
-    && npm install --global yarn
+    && npm install -y --global yarn
 
 RUN echo ahoy from Dockerfile
 
