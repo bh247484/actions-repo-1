@@ -11,5 +11,5 @@ RUN echo ahoy from Dockerfile
 # ENTRYPOINT ["/script.sh"]
 
 RUN git clone https://github.com/bh247484/actions-repo-2
-RUN ls
+RUN cd actions-repo-2 && ls
 # RUN cat README.md
