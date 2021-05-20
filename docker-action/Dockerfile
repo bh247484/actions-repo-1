@@ -4,6 +4,10 @@ FROM ubuntu:latest
 RUN apt update
 RUN apt install -y git
 
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - \
+    && apt-get install -y nodejs \
+    && npm install --global yarn
+
 RUN echo ahoy from Dockerfile
 
 ADD script.sh /script.sh
