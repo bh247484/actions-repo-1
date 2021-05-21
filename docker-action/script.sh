@@ -5,8 +5,8 @@ echo ahoy from script.sh
 mkdir /root/.ssh/
 
 echo "$ACC_KEY" > /root/.ssh/id_rsa
-ssh -o StrictHostKeyChecking=no
-# echo “StrictHostKeyChecking no “ > /root/.ssh/config
+# ssh -o StrictHostKeyChecking=no
+echo “StrictHostKeyChecking no“ > /root/.ssh/config
 
 # git config --global credential.helper store
 
