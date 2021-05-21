@@ -42,8 +42,9 @@ git push origin -u pb-9.15.0-upgrade
 # GITHUB_PASSWORD="$ACC_KEY"
 # GITHUB_HOST="https://bh247484:$ACC_KEY@github.com/"
 GITHUB_TOKEN="$ACC_KEY"
+GH_TOKEN="$ACC_KEY"
 
-gh auth login --with-token < "$ACC_KEY"
+# gh auth login --with-token < "$ACC_KEY"
 gh pr create -a bh247484 --base main --title "Upversion Playbook to 9.15.0" --body "PR description" -l enhancement
 # --head actions-repo-2:pb-9.15.0-upgrade
 
