@@ -18,10 +18,6 @@ jobs:
       uses: ./docker-action
       with:
         ACC_KEY: ${{ secrets.ACC_KEY }}
-    
-    
-    - name: Main Yaml Run
-      run: echo ahoy matey from main.yml
 
     - shell: bash
       env:
