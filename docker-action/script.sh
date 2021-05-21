@@ -34,12 +34,13 @@ git push origin -u pb-9.15.0-upgrade
 #     oauth_token: $ACC_KEY
 #     protocol: https" >> ~/.config/hub
 
-git config --global hub.user bh247484
-# git config --global hub.oauth_token "$ACC_KEY"
-git config --global hub.protocol https
+# git config --global hub.user bh247484
+# git config --global hub.protocol https
 
+HUB_PROTOCOL="https"
 GITHUB_USER="bh247484"
 GITHUB_PASSWORD="$ACC_KEY"
+GITHUB_HOST="https://bh247484:$ACC_KEY@github.com/"
 GITHUB_TOKEN="$ACC_KEY"
 
 HUB_VERBOSE=1 hub pull-request
