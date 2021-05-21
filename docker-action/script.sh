@@ -20,7 +20,7 @@ echo "$SSH_KEY" > /root/.ssh/id_rsa
 # Username for 'https://github.com/bh247484/actions-repo-2': bh247484
 # Password for 'https://USERNAME@some_git_server.com': <PASSWORD>
 
-git clone git@github.com:bh247484/actions-repo-2.git -y
+git clone git@github.com:bh247484/actions-repo-2.git
 cd actions-repo-2
 yarn upgrade playbook-ui@9.15.0
 cat package.json
