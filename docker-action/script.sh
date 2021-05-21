@@ -39,8 +39,8 @@ git push origin -u pb-9.15.0-upgrade
 # git config --global hub.protocol https
 
 GITHUB_USER="bh247484"
-GITHUB_PASSWORD=${ACC_KEY}
-GITHUB_TOKEN=${ACC_KEY}
+GITHUB_PASSWORD="$ACC_KEY"
+GITHUB_TOKEN="$ACC_KEY"
 
 HUB_VERBOSE=1 hub pull-request -a bh247484 -l enhancement 
 
