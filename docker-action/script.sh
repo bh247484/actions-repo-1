@@ -41,12 +41,11 @@ git push origin -u pb-9.15.0-upgrade
 # GITHUB_USER="bh247484"
 # GITHUB_PASSWORD="$ACC_KEY"
 # GITHUB_HOST="https://bh247484:$ACC_KEY@github.com/"
-GITHUB_TOKEN="$ACC_KEY"
 GH_TOKEN="$ACC_KEY"
 
 
 touch key.txt
-echo "$ACC_KEY" >>> key.txt
+echo "$ACC_KEY" > key.txt
 gh auth login --with-token < key.txt
 # touch key.txt
 # echo "$ACC_KEY" >>> key.txt
