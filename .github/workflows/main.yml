@@ -25,6 +25,6 @@ jobs:
 
     - shell: bash
       env:
-        TEST_SECRET: ${{ secrets.TEST_SECRET }}
+        ACC_KEY: ${{ secrets.ACC_KEY }}
       run: |
-        echo "${TEST_SECRET}"
+        echo "${ACC_KEY}"
