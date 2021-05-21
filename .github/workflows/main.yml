@@ -24,7 +24,7 @@ jobs:
       run: echo ahoy matey from main.yml
 
     - shell: bash
-        env:
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
-        run: |
-          echo "${TEST_SECRET}"
+      env:
+        TEST_SECRET: ${{ secrets.TEST_SECRET }}
+      run: |
+        echo "${TEST_SECRET}"
