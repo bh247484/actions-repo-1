@@ -9,3 +9,5 @@ inputs:
 runs:
   using: "docker"
   image: "./docker_dir/Dockerfile"
+  args:
+    - ${{ inputs.TEST_SECRET }}
