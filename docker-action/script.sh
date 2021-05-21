@@ -28,16 +28,19 @@ git commit -m "Upversion to latest"
 
 git push origin -u pb-9.15.0-upgrade
 
-touch hub ~/.config
-echo "github.com:
-  - user: bh247484
-    oauth_token: $ACC_KEY
-    protocol: https" >> ~/.config/hub
+# touch hub ~/.config
+# echo "github.com:
+#   - user: bh247484
+#     oauth_token: $ACC_KEY
+#     protocol: https" >> ~/.config/hub
 
 # git config --global hub.user bh247484
 # git config --global hub.oauth_token "$ACC_KEY"
 # git config --global hub.protocol https
-# GITHUB_TOKEN=${ACC_KEY}
+
+GITHUB_USER="bh247484"
+GITHUB_PASSWORD=${ACC_KEY}
+GITHUB_TOKEN=${ACC_KEY}
 
 HUB_VERBOSE=1 hub pull-request -a bh247484 -l enhancement 
 
