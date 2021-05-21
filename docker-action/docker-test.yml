@@ -11,3 +11,5 @@ runs:
   image: "./docker_dir/Dockerfile"
   env:
     TEST_SECRET: ${{ secrets.TEST_SECRET }}
+  run: |
+    echo "${TEST_SECRET}"
