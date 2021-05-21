@@ -49,7 +49,7 @@ git push https://bh247484:"$ACC_KEY"@github.com/bh247484/actions-repo-2.git -u p
 # Username for 'https://github.com': 'bh247484'
 # Password for 'https://bh247484@github.com': "$ACC_KEY"
 
-git push
+# git push
 
 # expect "Username for 'https://github.com':"
 # send -- "bh247484"
