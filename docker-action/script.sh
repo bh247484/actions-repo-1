@@ -31,7 +31,7 @@ git push origin -u pb-9.15.0-upgrade
 git config --global hub.protocol https
 GITHUB_TOKEN=${ACC_KEY}
 
-hub pull-request -a bh247484 -l enhancement -F- <<<"Upversion Playbook to 9.15.0
+HUB_VERBOSE=1 hub pull-request -a bh247484 -l enhancement -F- <<<"Upversion Playbook to 9.15.0
 
 
 This should be the PR description.
