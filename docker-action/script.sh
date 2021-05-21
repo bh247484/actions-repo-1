@@ -34,7 +34,7 @@ git push origin -u pb-9.15.0-upgrade
 #     protocol: https" >> ~/.config/hub
 
 git config --global hub.user bh247484
-git config --global hub.oauth_token ${ACC_KEY}
+git config --global hub.oauth_token "$ACC_KEY"
 git config --global hub.protocol https
 GITHUB_TOKEN=${ACC_KEY}
 
