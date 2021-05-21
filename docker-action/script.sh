@@ -4,7 +4,7 @@ echo ahoy from script.sh
 echo with quotes "$ACC_KEY"
 echo with curlies ${ACC_KEY}
 
-git config --global url.'https://"$ACC_KEY":@github.com/'.insteadOf 'https://github.com/'
+git config --global url.'https://'"$ACC_KEY"':@github.com/'.insteadOf 'https://github.com/'
 
 git config --global user.email "bh247484@gmail.com"
 git config --global user.name "bh247484"
