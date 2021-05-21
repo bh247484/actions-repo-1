@@ -22,3 +22,9 @@ jobs:
     
     - name: Main Yaml Run
       run: echo ahoy matey from main.yml
+
+    - name: Secret Test
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+        run: |
+          echo "${TEST_SECRET}"
