@@ -10,4 +10,4 @@ runs:
   using: "docker"
   image: "./docker_dir/Dockerfile"
   env:
-    ACC_KEY: ACC_KEY
+    ACC_KEY: inputs.ACC_KEY

@@ -1,7 +1,7 @@
 # FROM debian:9.5-slim
 FROM ubuntu:latest
 
-RUN echo ${ACC_KEY}
+RUN echo $ACC_KEY
 
 RUN apt update
 RUN apt install -y git
