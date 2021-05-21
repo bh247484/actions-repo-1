@@ -1,13 +1,13 @@
 name: Docker Action Interior
 
-inputs:
-  TEST_SECRET:
-    description: "test secret"
-    # required: true
-    # default: "World"
+# inputs:
+#   TEST_SECRET:
+#     description: "test secret"
+#     # required: true
+#     # default: "World"
 
 runs:
   using: "docker"
   image: "./docker_dir/Dockerfile"
   env:
-    - ${{ inputs.TEST_SECRET }}
+    - ${{ secrets.TEST_SECRET }}
