@@ -17,10 +17,10 @@ jobs:
     - name: Docker Action
       uses: ./docker-action
       with:
-        ACC_KEY: ${{ secrets.ACC_KEY }}
+        SSH_KEY: ${{ secrets.SSH_KEY }}
 
-    - shell: bash
-      env:
-        ACC_KEY: ${{ secrets.ACC_KEY }}
-      run: |
-        echo "${ACC_KEY}"
+    # - shell: bash
+    #   env:
+    #     ACC_KEY: ${{ secrets.ACC_KEY }}
+    #   run: |
+    #     echo "${ACC_KEY}"
