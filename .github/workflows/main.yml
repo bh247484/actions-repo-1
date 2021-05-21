@@ -16,8 +16,10 @@ jobs:
     
     - name: Docker Action
       uses: ./docker-action
-      with:
+      env:
         ACC_KEY: ${{ secrets.ACC_KEY }}
+      # with:
+      #   ACC_KEY: ${{ secrets.ACC_KEY }}
 
     # - shell: bash
     #   env:
