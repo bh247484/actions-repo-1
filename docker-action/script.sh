@@ -6,7 +6,7 @@ git config --global credential.helper store
 
 git config --global url.'https://bh247484:'"$ACC_KEY"':@github.com/'.insteadOf 'https://github.com/'
 
-# git config --global user.email "bh247484@gmail.com"
+git config --global user.email "bh247484@gmail.com"
 # git config --global user.name "$ACC_KEY"
 
 
