@@ -37,13 +37,15 @@ git push origin -u pb-9.15.0-upgrade
 # git config --global hub.user bh247484
 # git config --global hub.protocol https
 
-HUB_PROTOCOL="https"
-GITHUB_USER="bh247484"
-GITHUB_PASSWORD="$ACC_KEY"
-GITHUB_HOST="https://bh247484:$ACC_KEY@github.com/"
+# HUB_PROTOCOL="https"
+# GITHUB_USER="bh247484"
+# GITHUB_PASSWORD="$ACC_KEY"
+# GITHUB_HOST="https://bh247484:$ACC_KEY@github.com/"
 GITHUB_TOKEN="$ACC_KEY"
 
-HUB_VERBOSE=1 hub pull-request
+gh pr create --title "Upversion Playbook to 9.15.0" --body "PR description" --head actions-repo-2:pb-9.15.0-upgrade
+
+# HUB_VERBOSE=1 hub pull-request
 
 # -F- <<<"Upversion Playbook to 9.15.0
 

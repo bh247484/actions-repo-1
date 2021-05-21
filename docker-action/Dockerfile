@@ -6,7 +6,8 @@ RUN echo $ACC_KEY
 RUN apt update
 RUN apt install -y git
 RUN apt install -y curl
-RUN apt install -y hub
+# RUN apt install -y hub
+RUN apt install gh -y
 
 ENV NVM_VERSION v0.33.8
 ENV NODE_VERSION v12.20.1
