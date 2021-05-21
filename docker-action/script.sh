@@ -28,7 +28,7 @@ git commit -m "Upversion to latest"
 
 git push origin -u pb-9.15.0-upgrade
 
-touch ~/.config/hub
+touch hub ~/.config
 echo "github.com:
   - user: bh247484
     oauth_token: $ACC_KEY
