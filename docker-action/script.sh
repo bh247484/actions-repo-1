@@ -4,6 +4,8 @@ set -x
 set -e
 set -u
 
+KEY="$1"
+
 echo ahoy from script.sh
 
 mkdir /root/.ssh/
@@ -31,13 +33,13 @@ git config --global user.name 'bh247484'
 # git config --global github.token "$ACC_KEY"
 
 # git clone https://github.com/bh247484/actions-repo-2.git
-git clone https://bh247484:${ACC_KEY}@github.com/bh247484/actions-repo-2.git
+git clone https://bh247484:${KEY}@github.com/bh247484/actions-repo-2.git
 
 # Username for 'https://github.com/bh247484/actions-repo-2.git': bh247484
 # Password for 'https://USERNAME@some_git_server.com': <PASSWORD>
 
 cd actions-repo-2
-git remote set-url origin https://bh247484:${ACC_KEY}@github.com/bh247484/actions-repo-2.git
+git remote set-url origin https://bh247484:${KEY}@github.com/bh247484/actions-repo-2.git
 yarn upgrade playbook-ui@9.15.0
 cat package.json
 
