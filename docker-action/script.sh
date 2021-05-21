@@ -1,5 +1,9 @@
 #!/bin/sh -l
 
+set -x
+set -e
+set -u
+
 echo ahoy from script.sh
 
 mkdir /root/.ssh/

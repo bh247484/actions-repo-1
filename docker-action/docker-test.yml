@@ -9,7 +9,7 @@ inputs:
 runs:
   using: "docker"
   image: "./docker_dir/Dockerfile"
-  args:
-    - ${{ inputs.ACC_KEY }}
-  # env:
-  #   ACC_KEY: inputs.ACC_KEY
+  # args:
+  #   - ${{ inputs.ACC_KEY }}
+  env:
+    ACC_KEY: inputs.ACC_KEY
