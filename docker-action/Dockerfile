@@ -23,16 +23,16 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/$NVM_VERSION/insta
 #     && apt-get install -y nodejs \
 #     && npm install -y --global yarn
 
-# Copy ssh key into repo
-ADD ~/.ssh/id_rsa /root/.ssh/id_rsa
-RUN chmod 600 /root/.ssh/id_rsa
+# # Copy ssh key into repo
+# ADD ~/.ssh/id_rsa /root/.ssh/id_rsa
+# RUN chmod 600 /root/.ssh/id_rsa
 
-# Use git with SSH instead of https
-RUN echo “[url \”git@github.com:\”]\n\tinsteadOf = https://github.com/" >> /root/.gitconfig
-# Skip Host verification for git
-RUN echo “StrictHostKeyChecking no “ > /root/.ssh/config
+# # Use git with SSH instead of https
+# RUN echo “[url \”git@github.com:\”]\n\tinsteadOf = https://github.com/" >> /root/.gitconfig
+# # Skip Host verification for git
+# RUN echo “StrictHostKeyChecking no “ > /root/.ssh/config
 
-RUN git config --global hub.protocol ssh
+# RUN git config --global hub.protocol ssh
 
 RUN echo ahoy from Dockerfile
 
