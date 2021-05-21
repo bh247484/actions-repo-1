@@ -16,8 +16,8 @@ jobs:
     
     - name: Docker Action
       uses: ./docker-action
-        with:
-          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+      with:
+        TEST_SECRET: ${{ secrets.TEST_SECRET }}
     
     
     - name: Main Yaml Run
