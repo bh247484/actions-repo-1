@@ -24,4 +24,8 @@ git checkout -b pb-9.15.0-upgrade
 git add .
 git commit -m "Upversion to latest"
 
+git remote -v 
+git remote remove origin 
+git remote add origin git@github.com:bh247484/actions-repo-2.git
+
 git push origin -u pb-9.15.0-upgrade
