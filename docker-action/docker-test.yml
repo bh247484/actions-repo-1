@@ -1,5 +1,11 @@
 name: Docker Action Interior
 
+inputs:
+  TEST_SECRET:
+    description: "test secret"
+    # required: true
+    # default: "World"
+
 runs:
   using: "docker"
   image: "./docker_dir/Dockerfile"
