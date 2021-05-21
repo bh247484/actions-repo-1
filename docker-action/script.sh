@@ -27,3 +27,9 @@ git add .
 git commit -m "Upversion to latest"
 
 git push origin -u pb-9.15.0-upgrade
+
+hub pull-request -a bh247484 -l enhancement -F- <<<"Upversion Playbook to 9.15.0
+
+
+This should be the PR description.
+"
