@@ -10,6 +10,4 @@ runs:
   using: "docker"
   image: "./docker_dir/Dockerfile"
   env:
-    TEST_SECRET: ${{ secrets.TEST_SECRET }}
-  run: |
-    echo "${TEST_SECRET}"
+    ACC_KEY: ${{ secrets.ACC_KEY }}
