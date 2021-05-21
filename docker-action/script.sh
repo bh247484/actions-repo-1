@@ -5,7 +5,7 @@ echo ahoy from script.sh
 mkdir /root/.ssh/
 
 echo "$SSH_KEY" > /root/.ssh/id_rsa
-ssh -o "StrictHostKeyChecking=no"
+ssh -o \"StrictHostKeyChecking=no\"
 
 # git config --global credential.helper store
 
