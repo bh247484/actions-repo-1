@@ -45,7 +45,9 @@ git config --global credential.helper store
 git push origin -u pb-9.15.0-upgrade
 
 Username for 'https://github.com': "bh247484"
-Password for 'https://USERNAME@github.com': "$ACC_KEY"
+Password for 'https://bh247484@github.com': "$ACC_KEY"
+
+git push
 
 # expect "Username for 'https://github.com':"
 # send -- "bh247484"
