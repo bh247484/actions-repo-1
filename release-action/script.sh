@@ -1,8 +1,12 @@
 #!/bin/bash
 
+set -x
+set -e
+set -u
+
 echo "$RELEASE_TYPE release"
 
-if $RELEASE_TYPE == 'alpha'
+if [ $RELEASE_TYPE == "alpha" ]
 then
   regex='^@alpha-deploy[[:space:]]([[0-9]+\.[0-9]+\.[0-9]+])$'
   if [[ $BODY_TEXT =~ regex ]]; then
