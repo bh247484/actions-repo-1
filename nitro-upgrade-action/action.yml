@@ -1,4 +1,4 @@
-name: Docker Action Interior
+name: Nitro Upgrade Action
 
 # inputs:
 #   ACC_KEY:
@@ -8,6 +8,6 @@ name: Docker Action Interior
 
 runs:
   using: "docker"
-  image: "./docker_dir/Dockerfile"
+  image: "./Dockerfile"
   # args:
   #   - ${{ inputs.ACC_KEY }}

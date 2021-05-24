@@ -1,0 +1,15 @@
+name: Main Release
+
+on:
+  pull_request:
+    branchs: [master]
+    types: [closed]
+
+jobs:
+  release:
+    if: github.event.pull_request.merged == true
+    steps:
+    - name: Docker Run
+      uses: ./release-action
+      env:
+        RELEASE_TYPE: "main"

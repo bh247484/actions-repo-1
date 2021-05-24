@@ -1,0 +1,5 @@
+name: Release Action
+
+runs:
+  using: "docker"
+  image: "./Dockerfile"

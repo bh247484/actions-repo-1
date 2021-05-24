@@ -1,0 +1,14 @@
+name: Alpha Release
+
+on:
+  issue_comment:
+    types: [created, edited]
+
+jobs:
+  release:
+    if: contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '/alpha-release')
+    steps:
+    - name: Docker Run
+      uses: ./release-action
+      env:
+        RELEASE_TYPE: "alpha"

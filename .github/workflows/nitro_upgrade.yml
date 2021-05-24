@@ -1,4 +1,4 @@
-name: Maiden Voyage
+name: Nitro Upgrade
 
 on:
   push:
@@ -7,19 +7,15 @@ on:
     #   - '*'
   pull_request:
     branchs: [ master ]
-    # types: [ closed ]
 
 jobs:
-  main_run:
-    # if: github.event.pull_request.merged == true
-
+  upgrade:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v2
     
     - name: Docker Action
-      uses: ./docker-action
+      uses: ./nitro-upgrade-action
       env:
         ACC_KEY: ${{ secrets.ACC_KEY }}
       # with:
