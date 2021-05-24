@@ -3,12 +3,16 @@ name: Maiden Voyage
 on:
   push:
     branchs: [ master ]
+    # tags:
+    #   - '*'
   pull_request:
     branchs: [ master ]
+    # types: [ closed ]
 
 jobs:
   main_run:
-    
+    # if: github.event.pull_request.merged == true
+
     runs-on: ubuntu-latest
     
     steps:
