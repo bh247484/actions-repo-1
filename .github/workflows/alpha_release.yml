@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '@alpha-deploy')
     steps:
+    - uses: actions/checkout@v2
     - name: Docker Run
       uses: ./release-action
       env:
