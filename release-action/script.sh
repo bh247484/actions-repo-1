@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "$RELEASE_TYPE release"
+
 if $RELEASE_TYPE == 'alpha'
 then
   regex='^@alpha-deploy[[:space:]]([[0-9]+\.[0-9]+\.[0-9]+])$'
@@ -9,4 +11,4 @@ then
   fi
 fi
 
-echo PB_VERSION
+echo ${PB_VERSION}
