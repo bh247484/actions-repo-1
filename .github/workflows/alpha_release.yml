@@ -6,9 +6,10 @@ on:
 
 jobs:
   release:
-    if: contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '/alpha-release')
+    if: contains(github.event.comment.html_url, '/pull/') && contains(github.event.comment.body, '@alpha-deploy')
     steps:
     - name: Docker Run
       uses: ./release-action
       env:
         RELEASE_TYPE: "alpha"
+        BODY_TEXT: ${{ github.event.comment.body }}
