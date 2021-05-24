@@ -7,6 +7,6 @@ RUN echo $RELEASE_TYPE
 RUN echo "Body text"
 RUN echo $BODY_TEXT
 
-# ADD script.sh /script.sh
-# RUN chmod +x /script.sh
-# ENTRYPOINT ["/script.sh"]
+ADD script.sh /script.sh
+RUN chmod +x /script.sh
+ENTRYPOINT ["/script.sh"]

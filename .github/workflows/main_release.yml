@@ -1,17 +1,23 @@
 name: Main Release
 
 on:
-  pull_request:
-    branchs: [master]
-    types: [closed]
+  # pull_request:
+  #   branchs: [master]
+  #   types: [closed]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Fakebook Version'
+        required: true
 
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    # if: github.event.pull_request.merged == true
     steps:
     - uses: actions/checkout@v2
     - name: Docker Run
       uses: ./release-action
       env:
         RELEASE_TYPE: "main"
+        PB_VERSION: ${{ github.event.inputs.version }}
